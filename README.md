@@ -19,3 +19,8 @@ other buildpacks is not recommended as it will increase compilation time.
 Run the following command to overwrite existing buildpacks:
 
     $ heroku buildpacks:set https://github.com/tt/heroku-buildpack-webscale.git
+
+
+## Credits
+
+Andrew Appleton proposed the web server implementation.
