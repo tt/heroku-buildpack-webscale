@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# bin/release <BUILD_DIR>
+
+set -eu -o pipefail
+
+cat <<-EOH
+default_process_types:
+  web: while true; do nc -l -p \$PORT <<<\$'HTTP/1.1 200 OK\r\n\r\n'; done
+EOH

@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# bin/compile <BUILD_DIR> <CACHE_DIR> <ENV_DIR>
+
+set -eu -o pipefail
+
+BUILD_DIR=$(cd "$1/" && pwd)
+
+# remove all files to reduce slug size
+rm -rf "${BUILD_DIR:?}/*"
